@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{ margin: 0; padding: 0;}
+			#box div{
+				width: 40px;
+				height: 40px;
+				margin: 5px;
+				
+			}
+			.box1{
+				background: rgb(220,220,120);
+			}
+			.box2{
+				background: rgb(222,222,122);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="box1"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		
+		var level = 1;  // 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  30
+		var hard = 2;	//2*2  3*3  4*4  5*5  6*6   7*7  8*8
+		//  level/2 +1
+		var oBox = document.getElementById("box")
+		function createDiv(){
+			oBox.innerHTML = ""
+			for(var i=0;i<hard*hard;i++){
+				var oDiv = document.createElement('div');
+			}
+		}
+		
+		function initColor(){
+			var r =parseInt( Math.random()*180 );			//0-180 +  70-level
+			var g =parseInt( Math.random()*180 );
+			var b =parseInt( Math.random()*180 );
+			
+			return arr = ['rgb('+r+','+g+','+b+')','rgb('+(r+50)+','+(g+50)+','+(b+50)+')']
+		}
+		var colorArr = initColor()
+		console.log(colorArr)
+		
+		//aDiv[i].index = i;
+		
+		var randNum = parseInt( Math.random()*aDiv.length)
+		aDiv[randNum].style.backgroundColor = colorArr[1]
+	</script>
+</html>
